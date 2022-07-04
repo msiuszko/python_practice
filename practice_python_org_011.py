@@ -1,15 +1,14 @@
 # sprawdzanie czy podana liczba jest liczbą pierwsza
-import sys
+number = int(input ("Give a number: "))
+x = [a for a in range (2, number) if number % a == 0]
 
-number = (input("Give a number:"))
-number = int(number)
-prime = False
-
-def pierwsza(number):
-    for x in range (2, number -1):
-        if number % x != 0:
-            continue
-        elif number % x == 0:
-            print("To nie jest liczba pierwsza")
-        sys.exit("To nie l. pierwsza")
-    sys.exit("To nie pierwsza")
+def prime(z):
+	if number > 1:
+		if len(x) == 0:
+			print ("The number is prime")
+		else:
+			print ("The number is not prime")
+	else:
+		print ("The number is not prime")
+             
+prime(number)
